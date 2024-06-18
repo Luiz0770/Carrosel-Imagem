@@ -1,0 +1,53 @@
+/* ============= Carrosel Dinamico ============= */
+
+.carrosel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container-carrosel {
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+    width: 500px;
+    height: 300px;
+}
+
+.container-images {
+    position: relative;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+
+    & img {
+        object-fit: cover;
+        width: 500px;
+        height: 300px;
+    }
+}
+
+#prev-img, #next-img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 18px; 
+    cursor: pointer;
+    z-index: 2;
+}
+
+#prev-img {
+    left: 0px;
+    top: calc(50% - 20px);
+}
+
+#next-img {
+    right: 0px;
+    top: calc(50% - 20px);
+}
+
+/* ============= Fim Carrosel Dinamico ============= */
